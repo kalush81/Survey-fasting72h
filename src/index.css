@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+span {
+  font-size: 24px;
+}
+a {
+  text-decoration: none;
+}
+button {
+  transition: all 0.5s;
+}
+button:hover {
+  background: green;
+  opacity: 0.8;
+  color: white;
+
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  span {
+    font-size: 18px;
+    line-height: 1rem;
+  }
+}
