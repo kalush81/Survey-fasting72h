@@ -14,21 +14,21 @@ export default function Home({setIsRead}) {
   return (
     <div className='sv-title' style={{padding: '10%', lineHeight: '2rem', letterSpacing: '1px'}}>
       <p>
-        W związku z prowadzeniem badań dotyczących Sprawności fizycznej osób
-        regularnie trenujących a wpływ 72 – godzinnego postu na organizm w
-        aspekcie samooceny możliwości fizycznych, zwracam sie z uprzejma prośbą
+        W związku z prowadzeniem badań dotyczących sprawności fizycznej osób
+        regularnie trenujących, a wpływ 72 – godzinnego postu na organizm w
+        aspekcie samooceny możliwości fizycznych, zwracam sie z uprzejmą prośbą
         o udzielenie wiarygodnych odpowiedzi na poniższe pytania. Dane uzyskane
-        w czasie badania będą wykorzystywane do celów naukowych i nie beda
-        udostepniane osobom postronnym. Ankieta jest anonimowa.
+        w czasie badania będą wykorzystywane do celów naukowych i nie będą
+        udostępniane osobom postronnym. Ankieta jest anonimowa.
       </p>
       <p>
-        Ankieta dla osob, ktore przynajmniej raz stosowały post 72h, są
+        Ankieta dla osób, które przynajmniej raz stosowały post 72h, są
         sportowcami albo podejmują aktywność fizyczna przynajmniej według
         zaleceń WHO: W przypadku dorosłych (18-64 lata) WHO zaleca co najmniej
         150-300 minut umiarkowanej aktywności fizycznej lub 75 do 100 minut
-        intensywnych ćwiczeń tygodniowo. Ankieta zawiera 39 pytan + 1 dodatkowe.
+        intensywnych ćwiczeń tygodniowo.
       </p>
-      <Link className='btnLink' to='/survey'><button style={btnStyle} onClick={() => setIsRead(true)}><span>przejdz do ankiety</span></button></Link>
+      <Link className='btnLink' to='/survey'><button style={btnStyle} onClick={() => setIsRead(true)}><span>przejdź do ankiety</span></button></Link>
     </div>
   );
 }
