@@ -2,8 +2,8 @@ const table_choices = [
   "zdecydownie tak",
   "tak",
   "trudno powiedzieć",
-  "zdecydowanie nie",
   "nie",
+  "zdecydowanie nie",
 ];
 
 const isReq = false;
@@ -14,14 +14,14 @@ export default [
     name: "wiek",
     title: "wiek",
     isRequired: isReq,
-    choices: ["> 18", "18-30", "30-40", "50 <"],
+    choices: ["> 18", "18-30", "30-40", "40 <"],
     maxSelectedChoices: 1
   },
   {
     type: "checkbox",
-    name: "pleć",
-    title: "pleć",
-    choices: ["męzczyzna", "kobieta"],
+    name: "płeć",
+    title: "płeć",
+    choices: ["mężczyzna", "kobieta"],
     isRequired: isReq,
     maxSelectedChoices: 1
   },
@@ -29,7 +29,7 @@ export default [
     type: "text",
     inputType: "number",
     name: "waga w kg",
-    title: "podaj wage w kg",
+    title: "Podaj wage w kg",
     validators: [
         {
             type: "numeric",
@@ -43,7 +43,7 @@ export default [
     type: "text",
     inputType: "number",
     name: "wzrost w cm",
-    title: "podaj wzrost w cm",
+    title: "Podaj wzrost w cm",
     isRequired: isReq,
   },
   {
@@ -51,19 +51,19 @@ export default [
     name: "zakres uprawniania sportu",
     title: "Zaznacz zakres w jakim uprawiasz sport",
     isRequired: isReq,
-    choices: ["Rekreacynie", "Zawodowo"],
+    choices: ["Rekreacyjnie", "Zawodowo"],
   },
   {
     type: "checkbox",
     name: "czas wysilku w ciagu dnia",
-    title: "Ile przeciętnie trwa czas Twojego wysiłku fizycznego w ciągu dnia?",
+    title: "Ile przeciętnie trwa czas Twojego wysiłku fizycznego w ciągu dnia?", 
     isRequired: isReq,
     choices: [
       "ponizej 15 minut",
       "15-30 minut",
       "ok 45 min",
       "godzinę",
-      "więcej niz godzinę",
+      "więcej niż godzinę",
     ],
     maxSelectedChoices: 1,
   },
@@ -75,39 +75,44 @@ export default [
       "gry zespołowe",
       "akrobatyka/ gimnastyka",
       "podnoszenie ciężarów",
-      "ekkoatletyka",
+      "lekkoatletyka",
       "snowboard/narciarstwo",
-      "kolarstwo",
+      "kolarstwo/jazda na rowerze",
       "biegi długodystansowe",
+      "biegi sprinterskie",
       "pływanie",
       "sporty walki",
       "taniec/fitness",
       "pięciobój nowoczesny",
+      "kulturystyka/sporty sylwetkowe",
+      "crossfit/kalistenika",
     ],
     isRequired: isReq,
   },
   {
     type: "checkbox",
     name: "dlaczego stosuje post",
-    title: "Dlaczego stosujesz post?",
+    title: "Dlaczego stosujesz post? (zaznacz wszystkie pasujące)",
     hasOther: true,
     otherText: "inny, podaj powód",
     choices: [
       "Aby schudnąć",
-      "Dla wspomagania procesu autofagii",
-      "apoptozy",
-      "Zalecenia lekarza",
+      "Dla zdrowia",
+      "Aby wywołać proces autofagii, apoptozy",
+      "Ze względów religijnych",
+      "Zalecenie lekarza",
       "Dla oczyszczenia organizmu z toksyn",
       "Dla poprawy wyglądu",
       "Dla poprawy wyników sportowych",
-      "dla satysfakcji osobistej",
+      "Dla satysfakcji osobistej",
       "Dla poprawy samopoczucia",
+      "Dla efektu lekkości w układzie trawiennym"
     ],
   },
   {
     type: "checkbox",
     name: "ilosc przebytych postow",
-    title: "Ile razy stosowales post 24-72h ?",
+    title: "Ile razy stosowałeś post trwający 72h?",
     choices: [
       "1 raz",
       "mniej niż 5 razy",
@@ -119,7 +124,7 @@ export default [
   },
   {
     type: "radiogroup",
-    name: "częstotliwosc uprawiania postow",
+    name: "częstotliwość uprawiania postow",
     title: "Czy regularnie stosujesz post?",
     choices: ["tak", "nie"],
     isRequired: isReq,
@@ -128,14 +133,14 @@ export default [
   {
     type: "dropdown",
     name: "odstep czasowy pomiedzy postami",
-    title: "w jakich odstępach czasowych?",
+    title: "W jakich odstępach czasowych?",
     visibleIf: "{częstotliwosc uprawiania postow} ='tak'",
     choices: [
-      "min co 2 tygodnie lub czesciej",
+      "minimum co 2 tygodnie lub częściej",
       "3-4 tygodnie",
-      "1-3 miesiecy",
-      "3-6 miesiecy",
-      "6 miesiecy do 1 roku",
+      "1-3 miesiące",
+      "3-6 miesiące",
+      "od pół roku do 1 roku",
     ],
   },
   {
@@ -148,21 +153,21 @@ export default [
   {
     type: "radiogroup",
     name: "wplyw postu na wynik badan specjalistycznych",
-    title: "czy wyniki ulegly poprawie?",
+    title: "Czy wyniki po poście ulegly poprawie?",
     visibleIf:
       "{czy byly robione badnia specjalistyczne przed i po poscie} = 'tak'",
     choices: [
       "zdecydowanie tak",
       "tak",
       "trudno powiedziec",
-      "zdcydowanie nie",
       "nie",
+      "zdecydowanie nie",
     ],
   },
   {
     type: "checkbox",
     name: "typ diety",
-    title: "jaka diete stosujesz na codzien",
+    title: "Jaką dietę stosujesz na codzień?",
     choices: [
       "Dieta ketogeniczna",
       "Dieta meal replacement",
@@ -171,14 +176,14 @@ export default [
       "Dieta monoskładnikowa",
       "Dieta zdrowotna",
       "Dieta Foot map",
-      "Dieta paleo",
+      "Dieta Paleo",
       "Dieta wysokotłuszczowa",
       "Dieta wegetariańska",
       "Dieta warzywno-owocowa",
       "Dieta autorska",
       "Dieta Wegańska",
-      "nie zwracam uwagi na to co jem",
-      "nie mam diety ale staram się  jeść racjonalnie",
+      "Nie zwracam uwagi na to co jem",
+      "Nie mam diety ale staram się jeść racjonalnie",
     ],
     hasOther: true,
     otherText: "inna, podaj jaka",
@@ -187,7 +192,7 @@ export default [
   {
     type: "radiogroup",
     name: "Czy wczasie trwania postu podejmujesz aktywność fizyczna?",
-    title: "Czy wczasie trwania postu podejmujesz aktywność fizyczna?",
+    title: "Czy w czasie trwania postu podejmujesz aktywność fizyczną?",
     isRequired: isReq,
     choices: table_choices,
   },
@@ -208,7 +213,7 @@ export default [
   {
     type: "radiogroup",
     name: "wplyw postu na zwiekszenie aktywnosci fizycznej",
-    title: "Czy po poście zwiększasz ilość aktywności fizycznej?",
+    title: "Czy ?",
     isRequired: isReq,
     choices: table_choices,
   },
@@ -217,7 +222,7 @@ export default [
     name:
       "wplyw postu na zwiekszenie czasu wykonywania cwiczen podczas aktywnosci fizycznej",
     title:
-      "Czy po poście zwiększył się czas wykonywanych ćwiczeń podczas aktywności fizycznej?",
+      "Czy po poście zwiększył się czas/liczba powtórzeń wykonywanych ćwiczeń podczas sesji treningowej?",
     isRequired: isReq,
     choices: table_choices,
   },
@@ -225,14 +230,14 @@ export default [
     type: "radiogroup",
     name: "wplyw postu na odpornosc na zmeczenia podczas wysilku fizycznego",
     title:
-      "Czy po poście czujesz się bardziej odporny na zmęczenie podczas wysiłku fizycznego?",
+      "Czy po poście czujesz się bardziej odporny na zmęczenie podczas sesji treningowej?",
     isRequired: isReq,
     choices: table_choices,
   },
   {
     type: "radiogroup",
     name: "wplyw postu na koncentracje podczas cwiczen",
-    title: "Czy czujesz większą koncentrację podczas ćwiczeń?",
+    title: "Czy po poście czujesz większą koncentrację podczas ćwiczeń?",
     isRequired: isReq,
     choices: table_choices,
   },
@@ -240,7 +245,14 @@ export default [
     type: "radiogroup",
     name: "wplyw postu na zwiekszenie motywacji do cwiczen i uprawiania sportu",
     title:
-      "Czy po poście zauważyłeś/aś większą motywację podczas aktywności fizycznej ?",
+      "Czy po poście zauważyłeś/aś większą motywację podczas aktywności fizycznej?",
+    isRequired: isReq,
+    choices: table_choices,
+  },
+  {
+    type: "radiogroup",
+    name: "wplyw postu na wyniki sportowe",
+    title: "Czy po poście zauważyłeś/aś poprawę osiąganych wyników sportowych?",
     isRequired: isReq,
     choices: table_choices,
   },
@@ -268,7 +280,7 @@ export default [
   {
     type: "radiogroup",
     name: "wplyw postu na gietkosc",
-    title: "Czy po poście czujesz większą giętkość?",
+    title: "Czy po poście czujesz większą gibkość?",
     isRequired: isReq,
     choices: table_choices,
   },
@@ -276,22 +288,22 @@ export default [
     type: "radiogroup",
     name: "wplyw postu na wytrzymalosc fizyczna",
     title:
-      "Czy po po poście czujesz zwiększenie wytrzymałości podczas ćwiczeń?",
+      "Czy po po poście czujesz zwiększenie wytrzymałości swojego organizmu?",
     isRequired: isReq,
     choices: table_choices,
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na latwosc budowania masy miesniowej",
-    title: "Czy po poście łatwiej Ci jest budowac mase miesniowa?",
+    name: "wpływ postu na latwosc budowania masy miesniowej",
+    title: "Czy po poście łatwiej Ci jest budować masę mieśniową?",
     isRequired: isReq,
     choices: table_choices,
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na rozumienie wskazowek podczas wykonywania cwiczen",
+    name: "wpływ postu na rozumienie wskazowek podczas wykonywania cwiczen",
     title:
-      "Czy przyjmowane wskazówki podczas ćwiczeń są dla Ciebie bardziej klarowne/jasne?",
+      "Czy wskazówki/polecenia podczas ćwiczeń są dla Ciebie bardziej klarowne/jasne?",
     isRequired: isReq,
     choices: table_choices,
   },
@@ -299,7 +311,7 @@ export default [
     type: "radiogroup",
     name: "wplyw postu na poczucie satysfakcji podczas wykonywania cwiczen",
     title:
-      "Czy podczas ćwiczeń/po ćwiczeniach czujesz się bardziej szczęśliwy/ usatysfakcjonowany/ spełniony?",
+      "Czy podczas ćwiczeń/po ćwiczeniach czujesz się bardziej szczęśliwy/ usatysfakcjonowany/spełniony?",
     isRequired: isReq,
     choices: table_choices,
   },
@@ -321,7 +333,7 @@ export default [
   {
     type: "radiogroup",
     name: "wplyw postu na efekt jojo",
-    title: "Czy po poście zauważyłeś/aś wzrost masy ciała — „efekt jojo”? ",
+    title: "Czy po poście zauważyłeś/aś wzrost masy ciała — „efekt jojo”?",
     isRequired: isReq,
     choices: table_choices,
   },
@@ -334,15 +346,30 @@ export default [
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na sen",
-    title: "Czy Twój sen po poście jest spokojniejszy?",
+    name: "wplyw postu na puls i cisnienie krwi",
+    title: "Czy zauważyłeś/aś poprawę w wynikach ciśnienia krwi i pulsu?",
+    isRequired: isReq,
+    choices: table_choices,
+  },
+  {
+    type: "radiogroup",
+    name: "wplyw postu na stan umyslu",
+    title: "Czy po poście czujesz się pewniejszy siebie?",
     isRequired: isReq,
     choices: table_choices,
   },
   {
     type: "radiogroup",
     name: "wplyw postu na zapamietywanie",
-    title: "Czy Twoja umiejętność zapamiętywania uległa poprawie?",
+    title: "Czy Twoja umiejętność zapamiętywania i koncentracji uległa poprawie?",
+    isRequired: isReq,
+    choices: table_choices,
+  },
+  {
+    type: "radiogroup",
+    name: "wplyw postu na decyzyjnosc i rozwiazywanie problemow",
+    title:
+      "Czy po poście czujesz łatwość podejmowania decyzji, rozwiązywania problemów i lepszą kontrole emocji?",
     isRequired: isReq,
     choices: table_choices,
   },
@@ -355,21 +382,21 @@ export default [
   },
   {
     type: "radiogroup",
-    name:
-      "wplyw postu na motywacje do podejmowania nowych wyzwan na rzecz ciala i umyslu",
-    title:
-      "Czy przebyty post motywuje Cię do podejmowania nowyh wyzwan na rzecz wlasnego ciala i umyslu?",
+    name: "wplyw postu na odczuwanie stresu i radzenie sobie z nim",
+    title: "Czy po poście czujesz się odporniejszy na stres?",
     isRequired: isReq,
     choices: table_choices,
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na decyzyjnosc i rozwiazywanie problemow",
+    name:
+      "wplyw postu na motywacje do podejmowania nowych wyzwan na rzecz ciala i umyslu",
     title:
-      "Czy po poście czujesz latwosc podejmowania decyzji i lepiej rozwiazujesz problemy?",
+      "Czy przebyty post motywuje Cię do podejmowania nowych wyzwań na rzecz własnego ciała i umysłu?",
     isRequired: isReq,
     choices: table_choices,
   },
+
   {
     type: "radiogroup",
     name: "wplyw postu na zmniejszenie problemow zdrowotnych",
@@ -387,20 +414,6 @@ export default [
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na odczuwanie stresu i radzenie sobie z nim",
-    title: "Czy po poście czujesz się odporniejszy na stres?",
-    isRequired: isReq,
-    choices: table_choices,
-  },
-  {
-    type: "radiogroup",
-    name: "wplyw postu na stan umyslu",
-    title: "Czy po poście czujesz spokój umysłu?",
-    isRequired: isReq,
-    choices: table_choices,
-  },
-  {
-    type: "radiogroup",
     name: "wplyw postu na jakosc snu",
     title: "Czy po poście Twój sen jest lepszy?",
     isRequired: isReq,
@@ -410,6 +423,6 @@ export default [
     type: "comment",
     name: "suggestions",
     title:
-      "Jesli na temat postow masz wlasne spostrzezenia lub uwagi, ktorych nie uwzglednia ta ankieta i chcialbys sie nimi podzielic, mozesz to wpisac w polu ponizej",
+      "Jeżeli na temat postów masz własne spostrzeżenia lub uwagi, których nie uwzglednia ta ankieta i możesz się z nimi podzielić, wpisz je w polu poniżej",
   },
 ];

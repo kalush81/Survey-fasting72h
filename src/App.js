@@ -3,7 +3,7 @@ import { useState } from 'react'
 import * as Survey from "survey-react";
 import elements from "./elements";
 import "survey-react/modern.css";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "./home";
 import SurveyCompo from './survey'
 import React from "react";
@@ -22,17 +22,17 @@ function App() {
   model.showQuestionNumbers = "on";
 
   return (
-    <div className="App">
+    <div>
       <Switch>
         <Route path="/survey">
           <SurveyCompo isRead={isRead}>
-            <Survey.Survey
+            {isRead ? <Survey.Survey
               model={model}
               onComplete={(result) => {
                 console.log("json result: ...", result.data);
                 console.log("res.data type", typeof result.data);
               }}
-            />
+            /> : <p>read instruction please</p>}
           </SurveyCompo>
         </Route>
         <Route path="/">
