@@ -7,10 +7,10 @@ const choices = [
 ];
 const choices2 = [
  "nie zauważyłem/am",
-  "bezpośrednio po  po poście",
+  "bezpośrednio po poście",
   "7-14 dni",
   "14-30 dni",
-  "> 30 dni ",
+  "więcej niż 30 dni",
 ];
 
 const isRequired = false;
@@ -217,7 +217,7 @@ export default [
     name:
       "wplyw postu na zwiekszenie czasu wykonywania cwiczen podczas aktywnosci fizycznej",
     title:
-      "Kiedy po poście zauważyłeś/aś, zwiekszenie czasu/liczby powtórzeń Ćwiczen podczas sesji treningowej?",
+      "Kiedy po poście zauważyłeś/aś, zwiekszenie czasu/liczby powtórzeń ćwiczen podczas sesji treningowej?",
     isRequired,
     choices2,
   },
@@ -225,7 +225,7 @@ export default [
     type: "radiogroup",
     name: "wplyw postu na odpornosc na zmeczenia podczas wysilku fizycznego",
     title:
-      "Czy zauważyłeś/aś lepsza tolerancje zmęczenia podczas sesji treningowej?",
+      "Czy zauważyłeś/aś, że post polepsza Twoją tolerancję na zmęczenie podczas sesji treningowej?",
     isRequired,
     choices,
   },
@@ -233,28 +233,28 @@ export default [
     type: "radiogroup",
     name: "wplyw postu na wytrzymalosc fizyczna",
     title:
-      "Czy zauważyłeś/aś, że post wplywa na wytrzymałośc Twojego organizmu?",
+      "Czy zauważyłeś/aś, że post wpływa na wytrzymałość Twojego organizmu?",
     isRequired,
     choices,
   },
   {
     type: "radiogroup",
     name: "wplyw postu na poprawe kondycji fizycznej",
-    title: "Czy zauważyłeś/aś, że post wplywa na poprawe Twojej kondycji fizycznej?",
+    title: "Czy zauważyłeś/aś, że post wpływa na poprawę Twojej kondycji fizycznej?",
     isRequired,
     choices,
   },
   {
     type: "radiogroup",
     name: "wplyw postu na zwiekszenie sily fizycznej",
-    title: "Czy zauważyłeś/aś, że post wplywa na zwiększenie siły fizycznej?",
+    title: "Czy zauważyłeś/aś, że post wpływa na zwiększenie Twojej siły fizycznej?",
     isRequired,
     choices,
   },
   {
     type: "radiogroup",
     name: "wplyw postu na zwiekszenie szybkosci i reakcji",
-    title: "Czy zauważyłeś/aś, że post wplywa na zwiększenie szybkości reakcji?",
+    title: "Czy zauważyłeś/aś, że post wpływa na zwiększenie szybkości reakcji?",
     isRequired,
     choices,
   },
@@ -268,7 +268,7 @@ export default [
   {
     type: "radiogroup",
     name: "wpływ postu na latwosc budowania masy miesniowej",
-    title: "Czy zauważyłeś/aś, że post wplywa na łatwiejsza budowe masy mieśniowej?",
+    title: "Czy zauważyłeś/aś, że post wpływa na łatwiejsze budowanie masy mieśniowej?",
     isRequired,
     choices,
   },
@@ -276,21 +276,21 @@ export default [
     type: "radiogroup",
     name: "wplyw postu na utrzymywanie tkanki tluszczowej w ciele",
     title:
-      "Czy bezposrednio po poście łatwiej Ci jest utrzymywać poziom tkanki tłuszczowej w ciele?",
+      "Czy bezpośrednio po poście łatwiej Ci jest utrzymywać poziom tkanki tłuszczowej w ciele?",
     isRequired,
     choices,
   },
   {
     type: "radiogroup",
     name: "wplyw postu na reukcje tkanki tluszczowej w ciele",
-    title: "Czy zauważyłeś/aś, że post wplywa na łatwiejsza redukcje tkanki tłuszczowej?",
+    title: "Czy zauważyłeś/aś, że post wpływa na łatwiejszą redukcję tkanki tłuszczowej?",
     isRequired,
     choices,
   },
   {
     type: "radiogroup",
     name: "wplyw postu na efekt jojo",
-    title: "Czy bezposrednio po poście zauważyłeś/aś wzrost masy ciała — „efekt jojo”?",
+    title: "Czy bezpośrednio po poście zauważyłeś/aś wzrost masy ciała — „efekt jojo”?",
     isRequired,
     choices,
   },
@@ -298,7 +298,7 @@ export default [
     type: "radiogroup",
     name: "wplyw postu na zwiekszenie motywacji do cwiczen i uprawiania sportu",
     title:
-      "Zauważyłeś/aś, że post wplywa na większą motywację i entuzjazm podczas aktywności fizycznej?",
+      "Zauważyłeś/aś, że post wpływa na większą motywację i entuzjazm podczas aktywności fizycznej?",
     isRequired,
     choices,
   },
@@ -306,7 +306,7 @@ export default [
     type: "radiogroup",
     name: "wplyw postu na koncentracje podczas cwiczen",
     title:
-      "Zauważyłeś/aś, że post wplywa na zwiększoną koncentrację/skupienie na szczegółach podczas treningu?",
+      "Zauważyłeś/aś, że post wpływa na zwiększoną koncentrację/skupienie na szczegółach podczas treningu?",
     isRequired,
     choices,
   },
@@ -336,9 +336,9 @@ export default [
   {
     type: "radiogroup",
     name: "wplyw postu na nastroj",
-    title: "Czy Twój ogólny nastrój bezpośrednio po poście uległ poprawie?",
+    title: "Kiedy po poście Twój ogólny nastrój uległ poprawie?",
     isRequired,
-    choices,
+    choices2,
   },
 
   {
@@ -352,14 +352,14 @@ export default [
     type: "radiogroup",
     name: "wplyw postu na decyzyjnosc i rozwiazywanie problemow",
     title:
-      "Czy zauważyłeś/aś, że post wplywa na łatwość podejmowania decyzji, rozwiązywania problemów i lepszą kontrole emocji?",
+      "Czy zauważyłeś/aś, że post wpływa na łatwość podejmowania decyzji, rozwiązywania problemów i lepszą kontrole emocji?",
     isRequired,
     choices,
   },
   {
     type: "radiogroup",
     name: "wplyw postu na odczuwanie stresu i radzenie sobie z nim",
-    title: "Czy przebyty post wzmocnil Twoja odpornosc na stres?",
+    title: "Czy przebyty post zwiększył Twoją odporność na stres?",
     isRequired,
     choices,
   },
@@ -375,14 +375,14 @@ export default [
   {
     type: "radiogroup",
     name: "wplyw postu na metabolizm",
-    title: "Czy po poście zauważyłeś/aś uregulowanie metabolizmu?",
+    title: "Kiedy po poście zauważyłeś/aś uregulowanie metabolizmu?",
     isRequired,
-    choices,
+    choices2,
   },
   {
     type: "radiogroup",
     name: "wplyw postu na jakosc snu",
-    title: "Czy po poście Twój sen jest lepszy?",
+    title: "Czy zauważyłeś/aś, że post wpływa na polepszenie jakości Twojego snu?",
     isRequired,
     choices,
   },
