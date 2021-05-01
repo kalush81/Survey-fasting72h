@@ -203,7 +203,7 @@ export default [
     name: "wplyw postu na wyniki sportowe",
     title: "Kiedy zauważyłeś/aś poprawę osiąganych wyników sportowych?",
     isRequired,
-    choices2,
+    choices: choices2,
   },
   {
     type: "radiogroup",
@@ -217,9 +217,9 @@ export default [
     name:
       "wplyw postu na zwiekszenie czasu wykonywania cwiczen podczas aktywnosci fizycznej",
     title:
-      "Kiedy po poście zauważyłeś/aś, zwiekszenie czasu/liczby powtórzeń ćwiczen podczas sesji treningowej?",
+      "Kiedy po poście zauważyłeś/aś, zwiekszenie czasu/liczby powtórzeń ćwiczeń podczas sesji treningowej?",
     isRequired,
-    choices2,
+    choices: choices2,
   },
   {
     type: "radiogroup",
@@ -338,7 +338,7 @@ export default [
     name: "wplyw postu na nastroj",
     title: "Kiedy po poście Twój ogólny nastrój uległ poprawie?",
     isRequired,
-    choices2,
+    choices: choices2,
   },
 
   {
@@ -377,7 +377,7 @@ export default [
     name: "wplyw postu na metabolizm",
     title: "Kiedy po poście zauważyłeś/aś uregulowanie metabolizmu?",
     isRequired,
-    choices2,
+    choices: choices2,
   },
   {
     type: "radiogroup",
