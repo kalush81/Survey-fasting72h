@@ -106,6 +106,7 @@ export default [
       "Aby schudnąć",
       "Dla zdrowia",
       "Dla pobudzenia mentalnego i fizycznego",
+      "Aby wejść w stan ketozy",
       "Aby wywołać proces autofagii, apoptozy",
       "Ze względów religijnych",
       "Zalecenie lekarza",
