@@ -14,16 +14,15 @@ export default function Home({setIsRead}) {
   return (
     <div className='sv-title' style={{padding: '10%', lineHeight: '2rem', letterSpacing: '1px'}}>
       <p>
-        W związku z prowadzeniem badań dotyczących sprawności fizycznej osób
-        regularnie trenujących, a wpływ 72 – godzinnego postu na organizm w
-        aspekcie samooceny możliwości fizycznych, zwracam sie z uprzejmą prośbą
-        o udzielenie wiarygodnych odpowiedzi na poniższe pytania. Dane uzyskane
-        w czasie badania będą wykorzystywane do celów naukowych i nie będą
-        udostępniane osobom postronnym. Ankieta jest anonimowa.
+      W związku z prowadzeniem badań dotyczących samooceny możliwości 
+      fizycznych i psychicznych osób regularnie trenujących po przebyciu 72 – godzinnego postu,
+      zwracam sie z uprzejmą prośbą o udzielenie wiarygodnych odpowiedzi na poniższe pytania.
+      Dane uzyskane w czasie badania będą wykorzystywane do celów naukowych i nie będą
+      udostępniane osobom postronnym. Ankieta jest anonimowa.
       </p>
       <p>
         Ankieta dla osób, które przynajmniej raz stosowały post 72h, są
-        sportowcami albo podejmują aktywność fizyczna przynajmniej według
+        sportowcami albo podejmują aktywność fizyczną przynajmniej według
         zaleceń WHO: W przypadku dorosłych (18-64 lata) WHO zaleca co najmniej
         150-300 minut umiarkowanej aktywności fizycznej lub 75 do 100 minut
         intensywnych ćwiczeń tygodniowo.
