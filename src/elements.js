@@ -13,7 +13,7 @@ const choices2 = [
   "więcej niż 30 dni",
 ];
 
-const isRequired = false;
+const isRequired = true;
 
 const elements = [
   {
