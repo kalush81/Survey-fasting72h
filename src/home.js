@@ -21,7 +21,7 @@ export default function Home({setIsRead}) {
       udostępniane osobom postronnym. Ankieta jest anonimowa.
       </p>
       <p>
-        Ankieta dla osób, które przynajmniej raz stosowały post 72h, są
+        Ankieta dla osób, które przynajmniej raz stosowały post minimum 72h, są
         sportowcami albo podejmują aktywność fizyczną przynajmniej według
         zaleceń WHO: W przypadku dorosłych (18-64 lata) WHO zaleca co najmniej
         150-300 minut umiarkowanej aktywności fizycznej lub 75 do 100 minut

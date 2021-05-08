@@ -15,13 +15,13 @@ const choices2 = [
 
 const isRequired = false;
 
-export default [
+const elements = [
   {
     type: "checkbox",
     name: "wiek",
     title: "Wiek",
     isRequired,
-    choices: ["> 18", "18-30", "30-40", "40 <"],
+    choices: ["< 18", "18-30", "30-40", "> 40"],
     maxSelectedChoices: 1,
   },
   {
@@ -133,7 +133,7 @@ export default [
   },
   {
     type: "radiogroup",
-    name: "częstotliwość uprawiania postow",
+    name: "czy regularnie uprawia posty",
     title: "Czy regularnie stosujesz post?",
     choices: ["tak", "nie"],
     isRequired,
@@ -161,7 +161,7 @@ export default [
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na wynik badan specjalistycznych",
+    name: "post wplynal na poprawe wynikow badan specjalistycznych",
     title: "Czy wyniki po poście ulegly poprawie?",
     visibleIf:
       "{czy byly robione badnia specjalistyczne przed i po poscie} = 'tak'",
@@ -169,7 +169,7 @@ export default [
   },
   {
     type: "checkbox",
-    name: "typ diety",
+    name: "typ diety na codzien",
     title: "Jaką dietę stosujesz na codzień?",
     choices: [
       "Dieta ketogeniczna",
@@ -208,7 +208,7 @@ export default [
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na zwiekszenie aktywnosci fizycznej",
+    name: "Czy po poscie zwieksza aktywnosc fizyczna",
     title: "Czy po poście zwiększasz ilość aktywności fizycznej?",
     isRequired,
     choices,
@@ -216,7 +216,7 @@ export default [
   {
     type: "radiogroup",
     name:
-      "wplyw postu na zwiekszenie czasu wykonywania cwiczen podczas aktywnosci fizycznej",
+      "czy zauwazono wplyw postu na zwiekszenie czasu wykonywania cwiczen podczas sesji treningowej",
     title:
       "Kiedy po poście zauważyłeś/aś, zwiekszenie czasu/liczby powtórzeń ćwiczeń podczas sesji treningowej?",
     isRequired,
@@ -224,7 +224,7 @@ export default [
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na odpornosc na zmeczenia podczas wysilku fizycznego",
+    name: "czy zauwazono wplyw postu na polepszenie odpornosci na zmeczenia podczas sesji treningpwe",
     title:
       "Czy zauważyłeś/aś, że post polepsza Twoją tolerancję na zmęczenie podczas sesji treningowej?",
     isRequired,
@@ -232,7 +232,7 @@ export default [
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na wytrzymalosc fizyczna",
+    name: "czy zauwazono wplyw postu na wytrzymalosc fizyczna",
     title:
       "Czy zauważyłeś/aś, że post wpływa na wytrzymałość Twojego organizmu?",
     isRequired,
@@ -261,7 +261,7 @@ export default [
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na gietkosc",
+    name: "wplyw postu na zwiekszenie gietkosci",
     title: "Czy po poście czujesz większą gibkość?",
     isRequired,
     choices,
@@ -275,7 +275,7 @@ export default [
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na utrzymywanie tkanki tluszczowej w ciele",
+    name: "wplyw postu na latwosc utrzymywania tkanki tluszczowej w ciele",
     title:
       "Czy bezpośrednio po poście łatwiej Ci jest utrzymywać poziom tkanki tłuszczowej w ciele?",
     isRequired,
@@ -283,21 +283,21 @@ export default [
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na reukcje tkanki tluszczowej w ciele",
+    name: "wplyw postu na zwiekszenie redukcje tkanki tluszczowej w ciele",
     title: "Czy zauważyłeś/aś, że post wpływa na łatwiejszą redukcję tkanki tłuszczowej?",
     isRequired,
     choices,
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na efekt jojo",
+    name: "czy zauwazono wplyw postu na efekt jojo",
     title: "Czy bezpośrednio po poście zauważyłeś/aś wzrost masy ciała — „efekt jojo”?",
     isRequired,
     choices,
   },
   {
     type: "radiogroup",
-    name: "wplyw postu na zwiekszenie motywacji do cwiczen i uprawiania sportu",
+    name: "czy zauwazono wplyw postu na zwiekszenie motywacji do cwiczen i uprawiania sportu",
     title:
       "Zauważyłeś/aś, że post wpływa na większą motywację i entuzjazm podczas aktywności fizycznej?",
     isRequired,
@@ -416,3 +416,10 @@ export default [
       "Jeżeli na temat postów masz własne spostrzeżenia lub uwagi, których nie uwzglednia ta ankieta i możesz się z nimi podzielić, wpisz je w polu poniżej",
   },
 ];
+
+export default elements.map(el => {
+  return {
+    ...el,
+    name: el.title
+  }
+})
